@@ -1,0 +1,289 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const articles = [];
+---
+
+<Layout
+  title="Artikel & Wawasan | Aletheia.id"
+  description="Baca artikel dan wawasan tentang hukum tata negara, hukum publik, dan pendidikan hukum akademik dari Aletheia.id."
+  keywords="artikel hukum, wawasan hukum, artikel hukum tata negara, penelitian hukum akademik"
+>
+  <main>
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="container animate-on-scroll">
+        <h1>Artikel & Wawasan</h1>
+        <div class="breadcrumb">
+          <a href="/">Beranda</a>
+          <span class="separator">/</span>
+          <span class="current">Artikel</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Articles Grid Section -->
+    <section class="section articles-section">
+      <div class="container">
+        <p class="section-subtitle animate-on-scroll" style="margin-bottom: 4rem;">
+          Tetap terinformasi dengan publikasi yang disusun oleh tim akademik kami. Kami menerbitkan pembaruan mengenai regulasi perusahaan, perkembangan konstitusional, dan panduan hukum perdata.
+        </p>
+
+        <div class="articles-grid">
+          {articles.length > 0 ? (
+            articles.map((article) => (
+              <article class="card article-card animate-on-scroll">
+                <div class="article-thumbnail" style={`background: ${article.gradient};`}>
+                  <span class="article-badge">{article.category}</span>
+                  <div class="thumbnail-overlay">
+                    <span>Pratinjau Artikel Akademik</span>
+                  </div>
+                </div>
+                
+                <div class="article-body">
+                  <span class="article-date">{article.date}</span>
+                  <h3>{article.title}</h3>
+                  <p>{article.excerpt}</p>
+                </div>
+                
+                <div class="article-footer">
+                  <a href="#" class="article-read-btn">Baca Artikel &rarr;</a>
+                </div>
+              </article>
+            ))
+          ) : (
+            <div class="no-articles animate-on-scroll">
+              <span class="no-articles-icon">📂</span>
+              <h3>Artikel Baru Sedang Disiapkan</h3>
+              <p>Tim akademik kami sedang memperluas perpustakaan dengan sumber daya pendidikan hukum baru dan pembahasan hukum publik yang terbaru.</p>
+            </div>
+          )}
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter CTA -->
+    <section class="section newsletter-cta" style="background-color: var(--gray-50); border-top: 1px solid var(--gray-200);">
+      <div class="container text-center animate-on-scroll">
+        <div class="cta-box">
+          <h2>Terima Pembaruan Akademik</h2>
+          <p>
+            Tetap terinformasi tentang materi pendidikan hukum baru, diskusi hukum tata negara, dan sumber daya hukum publik yang diterbitkan oleh platform Aletheia.id.
+          </p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Terima kasih atas minat Anda. Pembaruan akan dibagikan ketika konten baru diterbitkan.');">
+            <input type="email" placeholder="Alamat email" required class="newsletter-input" />
+            <button type="submit" class="btn btn-gold">Berlangganan</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  /* Articles Grid */
+  .articles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+
+  .no-articles {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 5rem 2rem;
+    background-color: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .no-articles-icon {
+    font-size: 3.5rem;
+    display: block;
+    margin-bottom: 1.5rem;
+    line-height: 1;
+  }
+
+  .no-articles h3 {
+    font-size: 1.6rem;
+    color: var(--navy);
+    margin-bottom: 0.75rem;
+  }
+
+  .no-articles p {
+    color: var(--gray-500);
+    font-size: 1.05rem;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .article-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .article-thumbnail {
+    height: 220px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .article-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: var(--gold);
+    color: var(--navy-darkest);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.35rem 0.85rem;
+    border-radius: var(--radius-sm);
+    z-index: 2;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .thumbnail-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(10, 22, 40, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+
+  .article-body {
+    padding: 2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .article-date {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--gray-500);
+    margin-bottom: 0.75rem;
+  }
+
+  .article-body h3 {
+    font-size: 1.3rem;
+    color: var(--navy);
+    line-height: 1.4;
+    margin-bottom: 1rem;
+  }
+
+  .article-body p {
+    color: var(--gray-700);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .article-footer {
+    padding: 0 2rem 2rem;
+  }
+
+  .article-read-btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--gold-dark);
+    transition: var(--transition-base);
+  }
+
+  .article-card:hover .article-read-btn {
+    color: var(--gold-light);
+  }
+
+  /* Newsletter Form */
+  .text-center {
+    text-align: center;
+  }
+
+  .cta-box {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .cta-box h2 {
+    font-size: 2.2rem;
+    color: var(--navy);
+    margin-bottom: 1rem;
+  }
+
+  .cta-box p {
+    color: var(--gray-700);
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+  }
+
+  .newsletter-form {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .newsletter-input {
+    flex-grow: 1;
+    max-width: 355px;
+    min-width: 250px;
+    padding: 0.85rem 1.25rem;
+    border: 1.5px solid var(--gray-300);
+    border-radius: var(--radius-sm);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: var(--navy-darkest);
+    transition: var(--transition-base);
+  }
+
+  .newsletter-input:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.15);
+  }
+
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .articles-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .articles-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .article-thumbnail {
+      height: 180px;
+    }
+    .cta-box h2 {
+      font-size: 1.8rem;
+    }
+    .newsletter-form {
+      flex-direction: column;
+      align-items: center;
+    }
+    .newsletter-input {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+</style>

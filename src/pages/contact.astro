@@ -1,0 +1,339 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Hubungi Aletheia.id | Platform Pendidikan Hukum Akademik"
+  description="Hubungi Aletheia.id untuk pertanyaan seputar pendidikan hukum akademik, pertanyaan platform, atau peluang kerja sama."
+  keywords="hubungi Aletheia.id, kontak pendidikan hukum, platform hukum akademik, pertanyaan studi hukum"
+>
+  <main>
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="container animate-on-scroll">
+        <h1>Hubungi Kantor Kami</h1>
+        <div class="breadcrumb">
+          <a href="/">Beranda</a>
+          <span class="separator">/</span>
+          <span class="current">Hubungi Kami</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Contact Section -->
+    <section class="section contact-section">
+      <div class="container">
+        <div class="contact-grid">
+          <!-- Left Column: Form -->
+          <div class="contact-form-container animate-on-scroll">
+            <h2>Kirimkan Pesan Anda</h2>
+            <p class="form-intro">
+              Silakan isi formulir di bawah ini. Tim akademik kami akan meninjau pertanyaan Anda dan mengarahkannya ke konten edukatif atau kontributor yang paling relevan.
+            </p>
+
+            <form class="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Terima kasih atas pertanyaan Anda. Tim Aletheia.id akan meninjau pesan Anda segera.');">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Nama Lengkap <span class="required">*</span></label>
+                  <input type="text" id="name" name="name" required placeholder="Nama Anda" />
+                </div>
+                <div class="form-group">
+                  <label for="email">Alamat Email <span class="required">*</span></label>
+                  <input type="email" id="email" name="email" required placeholder="nama.email@example.com" />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="phone">Nomor Telepon</label>
+                  <input type="tel" id="phone" name="phone" placeholder="Nomor telepon (opsional)" />
+                </div>
+                <div class="form-group">
+                  <label for="subject">Topik yang diminati</label>
+                  <select id="subject" name="subject">
+                    <option value="Pertanyaan Umum">Pertanyaan Umum</option>
+                    <option value="Sumber Daya Akademik">Sumber Daya Akademik</option>
+                    <option value="Hukum Perdata">Hukum Perdata</option>
+                    <option value="Hukum Tata Negara">Hukum Tata Negara</option>
+                    <option value="Hukum Administrasi">Hukum Administrasi</option>
+                    <option value="Hukum Bisnis">Hukum Bisnis</option>
+                    <option value="Hukum Keluarga">Hukum Keluarga</option>
+                    <option value="Kategori Lain">Kategori Lain</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Pesan Anda / Pertanyaan Singkat <span class="required">*</span></label>
+                <textarea id="message" name="message" rows="6" required placeholder="Bagikan pertanyaan, topik, atau bidang minat Anda..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-gold btn-submit">Kirim Pesan</button>
+            </form>
+          </div>
+
+          <!-- Right Column: Info Cards & Map -->
+          <div class="contact-info-container animate-on-scroll">
+            <h2>Informasi Platform</h2>
+            
+            <div class="info-cards-stack">
+              <!-- Address Card -->
+              <div class="info-card">
+                <span class="info-icon">📍</span>
+                <div class="info-text">
+                  <h3>Alamat Akademik</h3>
+                  <p>
+                    Fakultas Syariah dan Hukum<br />
+                    UIN Sunan Gunung Djati Bandung<br />
+                    Jalan A.H. Nasution No. 105, Cipadung, Kecamatan Cibiru, Kota Bandung, Jawa Barat 40614, Indonesia.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Phone Card -->
+              <div class="info-card">
+                <span class="info-icon">📞</span>
+                <div class="info-text">
+                  <h3>Kontak yang Disarankan</h3>
+                  <p>Gunakan formulir kontak untuk pertanyaan langsung dan koordinasi platform.</p>
+                </div>
+              </div>
+
+              <!-- Email Card -->
+              <div class="info-card">
+                <span class="info-icon">✉️</span>
+                <div class="info-text">
+                  <h3>Email</h3>
+                  <p>Gunakan formulir kontak untuk menjangkau tim Aletheia.id.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Office Hours -->
+            <div class="hours-card">
+              <h3>Ketersediaan Akademik</h3>
+              <ul class="hours-list">
+                <li><span>Senin – Jumat</span> <span>08:00 – 17:00</span></li>
+                <li><span>Sabtu</span> <span>09:00 – 13:00</span></li>
+                <li><span>Minggu</span> <span>Tutup</span></li>
+              </ul>
+            </div>
+
+            <!-- Google Maps Embed -->
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.978434315367!2d107.7233814757657!3d-6.903746667576082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68dd2634e5a959%3A0x6717a6157f5c78a0!2sFakultas%20Syariah%20dan%20Hukum%20UIN%20Sunan%20Gunung%20Djati!5e0!3m2!1sid!2sid!4v1719456000000!5m2!1sid!2sid" 
+              class="map-iframe"
+              width="100%" 
+              height="350" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  /* Contact Grid */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  /* Form Styling */
+  .contact-form-container h2,
+  .contact-info-container h2 {
+    font-size: 2rem;
+    color: var(--navy);
+    margin-bottom: 1rem;
+  }
+
+  .form-intro {
+    color: var(--gray-700);
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .form-row {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex-grow: 1;
+    width: 100%;
+  }
+
+  .form-group label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--navy-light);
+  }
+
+  .required {
+    color: #DC3545;
+  }
+
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    padding: 0.85rem 1.25rem;
+    border: 1.5px solid var(--navy-light);
+    border-radius: var(--radius-sm);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: var(--navy-darkest);
+    background-color: var(--white);
+    transition: var(--transition-base);
+    width: 100%;
+  }
+
+  .contact-form select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231B3A5C' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1.2em;
+    padding-right: 2.5rem;
+  }
+
+  .contact-form input:focus,
+  .contact-form select:focus,
+  .contact-form textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.15);
+  }
+
+  .contact-form textarea {
+    resize: vertical;
+  }
+
+  .btn-submit {
+    align-self: flex-start;
+    padding: 1rem 2.5rem;
+  }
+
+  /* Info Cards Styling */
+  .info-cards-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .info-card {
+    display: flex;
+    gap: 1.25rem;
+    padding: 1.5rem;
+    background-color: var(--white);
+    border-left: 4px solid var(--gold);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    border-top: 1px solid var(--gray-100);
+    border-right: 1px solid var(--gray-100);
+    border-bottom: 1px solid var(--gray-100);
+  }
+
+  .info-icon {
+    font-size: 1.8rem;
+    line-height: 1;
+  }
+
+  .info-text h3 {
+    font-size: 1.1rem;
+    color: var(--navy);
+    margin-bottom: 0.25rem;
+  }
+
+  .info-text p {
+    color: var(--gray-700);
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  /* Hours Card */
+  .hours-card {
+    background-color: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .hours-card h3 {
+    font-size: 1.1rem;
+    color: var(--navy);
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--gray-200);
+    padding-bottom: 0.5rem;
+  }
+
+  .hours-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  .hours-list li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: var(--gray-700);
+  }
+
+  .hours-list li span:first-child {
+    font-weight: 500;
+  }
+
+  /* Google Maps Embed */
+  .map-iframe {
+    width: 100%;
+    height: 350px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    border: 1.5px solid var(--navy-light);
+  }
+
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .form-row {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .btn-submit {
+      width: 100%;
+    }
+    .contact-form-container h2,
+    .contact-info-container h2 {
+      font-size: 1.8rem;
+    }
+  }
+</style>

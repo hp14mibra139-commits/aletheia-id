@@ -1,0 +1,64 @@
+---
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  keywords?: string;
+  canonical?: string;
+}
+
+const {
+  title,
+  description = 'Aletheia.id adalah platform pendidikan hukum akademik yang berfokus pada pendidikan hukum tata negara, penelitian hukum mahasiswa, dan literasi hukum publik.',
+  keywords = 'Aletheia.id, pendidikan hukum akademik, pendidikan hukum tata negara, penelitian hukum mahasiswa',
+  canonical,
+} = Astro.props;
+
+const canonicalUrl = canonical ?? new URL(Astro.url.pathname, 'https://aletheia.id').toString();
+---
+
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Future favicon: place favicon.ico in /public later; this link will work without further code changes. -->
+    <link rel="icon" href="/favicon.ico" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:site_name" content="Aletheia.id" />
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#132743" />
+
+    <!-- Google Fonts Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <Navbar />
+    <slot />
+    <Footer />
+
+    <script>
+      import '../scripts/main.js';
+    </script>
+  </body>
+</html>

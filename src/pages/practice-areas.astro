@@ -1,0 +1,224 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const practiceAreas = [
+  {
+    icon: '⚖️',
+    title: 'Hukum Perdata',
+    slug: 'civil-law',
+    description: 'Menyediakan pembahasan dan sumber belajar mengenai kewajiban pribadi, kepemilikan, kontrak, dan sengketa perdata dalam ranah hukum privat.'
+  },
+  {
+    icon: '🏛️',
+    title: 'Hukum Tata Negara',
+    slug: 'constitutional-law',
+    description: 'Mengulas hak-hak konstitusional, batas kewenangan negara, pengujian undang-undang, dan mekanisme yudisial yang berkaitan dengan hukum publik.'
+  },
+  {
+    icon: '📜',
+    title: 'Hukum Administrasi',
+    slug: 'administrative-law',
+    description: 'Menjelaskan tata kelola pemerintahan, keputusan administratif, sengketa perizinan, dan prinsip-prinsip hukum administrasi dalam format yang mudah dipahami.'
+  },
+  {
+    icon: '💼',
+    title: 'Hukum Bisnis',
+    slug: 'business-law',
+    description: 'Menyediakan sumber belajar mengenai pendirian perusahaan, kontrak komersial, transaksi bisnis, dan kepatuhan regulasi dalam dunia usaha.'
+  },
+  {
+    icon: '👨‍👩‍👧‍👦',
+    title: 'Hukum Keluarga',
+    slug: 'family-law',
+    description: 'Mengupas isu-isu hukum keluarga secara jelas, termasuk perceraian, hak asuh, nafkah, perjanjian pranikah, dan warisan.'
+  },
+  {
+    icon: '📋',
+    title: 'Konsultasi Hukum',
+    slug: 'legal-consultation',
+    description: 'Menyajikan pendekatan preventif terhadap risiko hukum melalui tinjauan dokumen, analisis regulasi, dan pemahaman atas jalur penyelesaian yang tepat.'
+  }
+];
+---
+
+<Layout
+  title="Bidang Kajian | Aletheia.id"
+  description="Jelajahi sumber daya pendidikan hukum akademik di bidang hukum perdata, hukum tata negara, hukum administrasi, hukum bisnis, hukum keluarga, dan konsultasi hukum."
+  keywords="hukum perdata, hukum tata negara, hukum administrasi, hukum bisnis, hukum keluarga, konsultasi hukum"
+>
+  <main>
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="container animate-on-scroll">
+        <h1>Bidang Kajian</h1>
+        <div class="breadcrumb">
+          <a href="/">Beranda</a>
+          <span class="separator">/</span>
+          <span class="current">Bidang Kajian</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Intro and Grid Section -->
+    <section class="section practice-areas-section">
+      <div class="container">
+        <p class="section-subtitle animate-on-scroll" style="margin-bottom: 4rem;">
+          Kontributor kami menawarkan keahlian yang terstruktur di berbagai kategori hukum. Kami menggabungkan kedalaman akademik dengan sumber pembelajaran praktis untuk mendukung minat hukum Anda.
+        </p>
+
+        <div class="practice-areas-grid">
+          {practiceAreas.map((area) => (
+            <div class="card practice-card animate-on-scroll">
+              <div class="practice-card-header">
+                <div class="practice-icon-bg">
+                  <span class="practice-icon">{area.icon}</span>
+                </div>
+              </div>
+              <div class="practice-card-body">
+                <h3>{area.title}</h3>
+                <p>{area.description}</p>
+              </div>
+              <div class="practice-card-footer">
+                <a href={`/practice-areas/${area.slug}`} class="practice-link-btn">Pelajari Lebih Lanjut &rarr;</a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom Consultation CTA -->
+    <section class="section consultation-cta" style="background-color: var(--gray-50); border-top: 1px solid var(--gray-200);">
+      <div class="container text-center animate-on-scroll">
+        <div class="cta-box">
+          <h2>Butuh Sumber Daya Hukum Akademik?</h2>
+          <p>
+            Jelajahi materi edukatif dan analisis hukum untuk memperdalam pemahaman Anda terhadap topik-topik hukum utama.
+          </p>
+          <a href="/contact" class="btn btn-gold">Hubungi Kami Hari Ini</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  /* Practice Areas Grid */
+  .practice-areas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+
+  .practice-card {
+    padding: 3rem 2rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-left: 4px solid transparent;
+  }
+
+  .practice-card:hover {
+    border-left-color: var(--gold);
+  }
+
+  .practice-card-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .practice-icon-bg {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--gray-100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-base);
+  }
+
+  .practice-card:hover .practice-icon-bg {
+    background-color: var(--navy-darkest);
+  }
+
+  .practice-icon {
+    font-size: 2rem;
+    line-height: 1;
+  }
+
+  .practice-card-body {
+    flex-grow: 1;
+  }
+
+  .practice-card-body h3 {
+    font-size: 1.4rem;
+    color: var(--navy);
+    margin-bottom: 1rem;
+  }
+
+  .practice-card-body p {
+    color: var(--gray-700);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+
+  .practice-card-footer {
+    padding-top: 1rem;
+    border-top: 1px solid var(--gray-100);
+  }
+
+  .practice-link-btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--gold-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: var(--transition-base);
+  }
+
+  .practice-card:hover .practice-link-btn {
+    color: var(--gold-light);
+  }
+
+  /* Bottom Consultation CTA */
+  .text-center {
+    text-align: center;
+  }
+
+  .cta-box {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .cta-box h2 {
+    font-size: 2.2rem;
+    color: var(--navy);
+    margin-bottom: 1rem;
+  }
+
+  .cta-box p {
+    color: var(--gray-700);
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .practice-areas-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .practice-areas-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .cta-box h2 {
+      font-size: 1.8rem;
+    }
+  }
+</style>

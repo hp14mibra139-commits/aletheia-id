@@ -1,0 +1,852 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+export function getStaticPaths() {
+  return [
+    {
+      params: { slug: 'civil-law' },
+      props: {
+        icon: '⚖️',
+        title: 'Hukum Perdata',
+        subtitle: 'Memahami hubungan pribadi, kewajiban, dan penyelesaian sengketa dalam kehidupan sehari-hari.',
+        overview: [
+          'Hukum perdata menjadi fondasi interaksi pribadi dalam masyarakat, mengatur hubungan antara individu, keluarga, dan pelaku usaha. Berbeda dengan hukum pidana yang menyoal pelanggaran publik yang dituntut oleh negara, hukum perdata dirancang untuk menyelesaikan sengketa privat, menegakkan perjanjian, dan melindungi hak-hak individu.',
+          'Ketika muncul sengketa terkait batas tanah, wanprestasi kontrak, atau kelalaian yang menimbulkan kerugian, hukum perdata menyediakan sistem yang tertib dan damai untuk menentukan tanggung jawab serta memberikan pemulihan. Tujuan utamanya adalah mengembalikan pihak yang dirugikan ke posisi yang seharusnya mereka miliki apabila kerugian itu tidak terjadi.',
+          'Dengan menetapkan hak dan kewajiban secara jelas, hukum perdata memberi rasa aman bagi warga dalam bertransaksi, membeli properti, dan membuat perjanjian pribadi. Hukum ini mendorong kerja sama dan prediktabilitas dalam transaksi sehari-hari dengan memastikan bahwa perjanjian bersifat mengikat secara hukum dan dapat ditegakkan.'
+        ],
+        scope: [
+          'Hukum Perikatan (kontrak, jual beli, sewa, dan perjanjian timbal balik)',
+          'Hukum Benda dan Tanah (hak milik, batas tanah, dan pendaftaran tanah)',
+          'Hukum Perbuatan Melawan Hukum dan Tanggung Jawab (kelalaian, kerusakan benda, dan tuntutan ganti rugi)',
+          'Warisan dan Wasiat (pembagian harta peninggalan dan pelaksanaan wasiat)',
+          'Perlindungan Konsumen (hak pembeli dan kewajiban produsen barang)'
+        ],
+        legalBasis: [
+          'Kitab Undang-Undang Hukum Perdata (KUHPer)',
+          'Hukum Perikatan dan Prinsip-Prinsip Kontrak Umum',
+          'Hak Milik dan Regulasi Agraria'
+        ],
+        whyItMatters: 'Hukum perdata melindungi individu dan pelaku usaha dengan menetapkan aturan bagi interaksi pribadi maupun komersial. Hukum ini memastikan bahwa ketika komitmen dilanggar atau kerugian ditimbulkan karena kelalaian, tersedia jalan penyelesaian yang jelas, sehingga menumbuhkan akuntabilitas dan menjaga keharmonisan sosial.',
+        examples: [
+          'Seorang pemilik rumah menyewakan rumahnya kepada penyewa, lalu muncul sengketa tentang siapa yang bertanggung jawab atas perbaikan kebocoran struktur utama.',
+          'Seorang konsumen membeli perangkat elektronik yang rusak segera setelah dibeli, sementara penjual menolak memenuhi kebijakan pengembalian.',
+          'Properti seseorang rusak akibat aliran air dari konstruksi drainase yang tidak semestinya dibuat tetangga.',
+          'Sebuah perusahaan membeli bahan baku dari pemasok, tetapi pemasok mengirimkan bahan dengan kualitas yang salah sehingga menghambat produksi.'
+        ],
+        faqs: [
+          {
+            q: 'Apa perbedaan utama antara hukum perdata dan hukum pidana?',
+            a: 'Hukum perdata berfokus pada sengketa privat antara individu atau organisasi dan menuntut ganti rugi atau pemulihan. Hukum pidana menangani perilaku yang mengancam keselamatan dan ketertiban publik, dituntut oleh negara, dan dapat berujung pada sanksi seperti penjara.'
+          },
+          {
+            q: 'Apa yang dimaksud dengan kontrak dalam hukum perdata?',
+            a: 'Kontrak adalah perjanjian yang mengikat secara hukum antara dua pihak atau lebih dan menimbulkan kewajiban saling mengikat. Agar sah, biasanya diperlukan persetujuan bersama, pihak yang cakap, tujuan yang sah, dan pertukaran nilai yang jelas.'
+          },
+          {
+            q: 'Apa yang terjadi jika kontrak dilanggar?',
+            a: 'Jika salah satu pihak tidak memenuhi janji kontraknya, pihak lain dapat menuntut pemulihan melalui negosiasi, mediasi, atau proses perdata. Bentuk pemulihan yang umum meliputi ganti rugi atau perintah pengadilan untuk melaksanakan isi kontrak.'
+          },
+          {
+            q: 'Apa yang dimaksud dengan tanggung jawab perdata atas perbuatan melawan hukum?',
+            a: 'Tanggung jawab perdata timbul ketika seseorang menimbulkan kerugian kepada pihak lain melalui kelalaian, tindakan disengaja, atau tanggung jawab mutlak. Pihak yang bertanggung jawab dapat diwajibkan secara hukum untuk mengompensasi kerugian korban.'
+          },
+          {
+            q: 'Bagaimana sengketa batas tanah diselesaikan?',
+            a: 'Sengketa batas ditelaah melalui akta tanah resmi, patok batas sejarah, dan peta ukur. Jika negosiasi gagal, pihak dapat meminta penetapan pengadilan perdata untuk menentukan batas hukum yang sah.'
+          }
+        ],
+        relatedArticles: [
+          {
+            title: 'Memahami Hukum Kontrak Bisnis di Indonesia',
+            category: 'Hukum Bisnis',
+            date: '15 Desember 2024',
+            excerpt: 'Tinjauan atas prinsip-prinsip utama yang mengatur kontrak bisnis di Indonesia, termasuk syarat pembentukan, daya laku, dan sengketa yang umum muncul.',
+            gradient: 'linear-gradient(135deg, #132743, #1B3A5C)'
+          },
+          {
+            title: 'Perubahan Penting dalam Hukum Keluarga: Yang Perlu Anda Ketahui',
+            category: 'Hukum Keluarga',
+            date: '28 November 2024',
+            excerpt: 'Perkembangan terbaru dalam regulasi hukum keluarga dan implikasinya terhadap perkawinan, pengaturan hak asuh, dan hak waris.',
+            gradient: 'linear-gradient(135deg, #1B3A5C, #243B5E)'
+          }
+        ]
+      }
+    },
+    {
+      params: { slug: 'constitutional-law' },
+      props: {
+        icon: '🏛️',
+        title: 'Hukum Tata Negara',
+        subtitle: 'Landasan pemerintahan, kewenangan negara, dan hak-hak fundamental.',
+        overview: [
+          'Hukum tata negara menjadi fondasi setiap negara-bangsa, menetapkan aturan tentang bagaimana pemerintah disusun dan kekuasaan dibagi. Hukum ini berfungsi sebagai otoritas hukum tertinggi, memastikan bahwa seluruh undang-undang, regulasi, dan keputusan eksekutif selaras dengan prinsip-prinsip pokok konstitusi nasional.',
+          'Selain mengatur penyelenggaraan kekuasaan, hukum tata negara juga menjadi pelindung warga negara dengan menetapkan dan menjaga hak-hak asasi serta kebebasan fundamental. Hukum ini menegaskan batas-batas kekuasaan negara, mencegah penyelenggaraan pemerintahan yang sewenang-wenang, dan memastikan hak-hak individu dihormati oleh otoritas publik.',
+          'Ketika muncul konflik antarorgan negara atau ketika warga merasa hak-hak fundamental mereka dilanggar oleh undang-undang, hukum tata negara menyediakan mekanisme yudisial, seperti Mahkamah Konstitusi, untuk menyelesaikan persoalan tersebut dan memulihkan ketertiban konstitusional.'
+        ],
+        scope: [
+          'Pemisahan Kekuasaan (hubungan antara eksekutif, legislatif, dan yudikatif)',
+          'Perlindungan Hak Asasi Fundamental (kebebasan berpendapat, beragama, dan berorganisasi)',
+          'Pengujian Undang-Undang (menilai apakah peraturan baru sesuai dengan Konstitusi)',
+          'Mandat Lembaga Negara (menentukan tugas dan batas kewenangan organ publik)',
+          'Sistem Pemilu dan Struktur Pemerintahan (aturan konstitusional bagi transisi jabatan publik)'
+        ],
+        legalBasis: [
+          'Undang-Undang Dasar Negara Republik Indonesia Tahun 1945 (UUD 1945)',
+          'Kerangka Mahkamah Konstitusi',
+          'Regulasi Tata Kelola Konstitusional dan Lembaga Negara'
+        ],
+        whyItMatters: 'Hukum tata negara memastikan bahwa tindakan pemerintah tetap sah dan demokratis. Hukum ini memberi kekuasaan kepada warga untuk menantang undang-undang yang inkonstitusional, melindungi minoritas dari penyalahgunaan kekuasaan, dan menciptakan stabilitas melalui aturan tetap dalam transisi pemerintahan.',
+        examples: [
+          'Sebuah kelompok masyarakat mengajukan petisi untuk menantang suatu undang-undang nasional, dengan alasan melanggar hak konstitusional atas pendidikan.',
+          'Dua kementerian pemerintah berbeda berselisih mengenai cabang mana yang berwenang mengatur perdagangan maritim daerah.',
+          'Seorang warga menentang keputusan munisipal yang membatasi hak berkumpul secara damai dengan mengacu pada perlindungan konstitusional atas unjuk rasa damai.',
+          'Seorang peneliti hukum menganalisis bagaimana regulasi perdagangan baru memengaruhi jaminan konstitusional atas kesempatan berusaha yang setara.'
+        ],
+        faqs: [
+          {
+            q: 'Apa peran konstitusi dalam sebuah negara?',
+            a: 'Konstitusi adalah hukum tertinggi di negara tersebut. Konstitusi menetapkan struktur pemerintahan, menentukan batas kekuasaan negara, dan menjamin hak-hak dasar warga negara.'
+          },
+          {
+            q: 'Apa yang dimaksud dengan “pemisahan kekuasaan”?',
+            a: 'Pemisahan kekuasaan adalah model pemerintahan yang membagi kewenangan negara ke dalam cabang eksekutif, legislatif, dan yudikatif. Hal ini mencegah penumpukan kekuasaan dan menciptakan mekanisme pengawasan serta keseimbangan.'
+          },
+          {
+            q: 'Apa yang dimaksud dengan uji materi?',
+            a: 'Uji materi adalah kekuasaan pengadilan, seperti Mahkamah Konstitusi, untuk menilai undang-undang, regulasi, atau tindakan eksekutif agar memastikan bahwa hal tersebut tidak melanggar konstitusi.'
+          },
+          {
+            q: 'Bagaimana hukum tata negara melindungi hak-hak individu?',
+            a: 'Konstitusi mengatur hak-hak fundamental yang tidak boleh dilanggar pemerintah secara sah. Jika undang-undang atau tindakan negara melanggar hak-hak itu, warga dapat mengajukannya ke pengadilan.'
+          },
+          {
+            q: 'Siapa yang dapat mengajukan permohonan uji materiil konstitusional di Indonesia?',
+            a: 'Setiap warga negara Indonesia, masyarakat hukum adat, badan usaha, atau lembaga publik yang merasa hak-hak konstitusionalnya dirugikan oleh suatu undang-undang dapat mengajukan permohonan.'
+          }
+        ],
+        relatedArticles: [
+          {
+            title: 'Melindungi Hak Konstitusional Anda: Panduan Hukum',
+            category: 'Hukum Tata Negara',
+            date: '10 Oktober 2024',
+            excerpt: 'Panduan komprehensif untuk memahami dan melindungi hak konstitusional melalui mekanisme hukum dan uji materi.',
+            gradient: 'linear-gradient(135deg, #0A1628, #132743)'
+          }
+        ]
+      }
+    },
+    {
+      params: { slug: 'administrative-law' },
+      props: {
+        icon: '📜',
+        title: 'Hukum Administrasi',
+        subtitle: 'Mengatur tindakan otoritas publik dan memastikan akuntabilitas birokrasi.',
+        overview: [
+          'Hukum administrasi mengendalikan cara lembaga pemerintah, kementerian, dan badan publik beroperasi dalam kegiatan sehari-hari. Hukum ini mengatur bagaimana otoritas tersebut menerbitkan izin, mengeluarkan perizinan, menegakkan aturan keselamatan, dan mengelola sumber daya publik, dengan memastikan mereka bertindak dalam batas hukum yang berlaku.',
+          'Karena otoritas publik mengambil keputusan yang berdampak langsung pada perusahaan dan warga, hukum administrasi memastikan keputusan itu adil, transparan, dan rasional. Hukum ini mencegah penyalahgunaan kekuasaan dengan mewajibkan lembaga mengikuti prosedur yang benar sebelum mengambil tindakan atau menjatuhkan sanksi.',
+          'Jika warga atau perusahaan dirugikan oleh keputusan pemerintah yang melawan hukum, seperti penolakan izin yang sewenang-wenang atau denda administratif yang tidak adil, hukum administrasi menyediakan pengadilan khusus yang dapat menantang dan membatalkan keputusan publik tersebut.'
+        ],
+        scope: [
+          'Perizinan dan Izin Usaha (lingkungan, komersial, dan persetujuan bangunan)',
+          'Pengadaan Publik dan Tender Pemerintah (aturan lelang yang adil untuk kontrak publik)',
+          'Menantang Keputusan Administratif yang Tidak Adil (uji materi terhadap tindakan lembaga)',
+          'Penegakan Regulasi dan Sanksi (pemeriksaan, peringatan, dan denda administratif)',
+          'Keterbukaan Informasi Publik (hak warga untuk mengakses dokumen pemerintah)'
+        ],
+        legalBasis: [
+          'Kerangka Administrasi Pemerintahan (Hukum Administrasi Negara)',
+          'Pedoman Administrasi Publik dan Kode Etik Pegawai Negeri',
+          'Kerangka Pengadilan Tata Usaha Negara (PTUN)'
+        ],
+        whyItMatters: 'Hukum administrasi melindungi warga dan pelaku usaha dari penyalahgunaan kekuasaan pemerintah. Hukum ini memastikan lembaga publik memperlakukan semua pihak secara adil, mengikuti prosedur hukum, dan mempertanggungjawabkan tindakan mereka, sehingga membangun kepercayaan terhadap lembaga publik.',
+        examples: [
+          'Sebuah perusahaan manufaktur menentang pencabutan mendadak izin operasinya oleh lembaga lingkungan setempat.',
+          'Sebuah perusahaan mengajukan banding atas denda administratif yang diterbitkan oleh otoritas pajak, dengan alasan lembaga itu tidak mengikuti prosedur pemberitahuan yang benar.',
+          'Sebuah perusahaan menantang keputusan tender publik, dengan alasan lembaga pemerintah melanggar pedoman lelang untuk menguntungkan pesaing.',
+          'Seorang warga meminta akses ke rencana zonasi resmi kota dan mengajukan banding administratif ketika permintaannya ditolak tanpa alasan yang jelas.'
+        ],
+        faqs: [
+          {
+            q: 'Apa tujuan utama hukum administrasi?',
+            a: 'Hukum administrasi memastikan lembaga pemerintah dan badan publik menjalankan wewenang mereka secara adil, sah, dan sesuai batas kewenangan, mencegah keputusan sewenang-wenang.'
+          },
+          {
+            q: 'Apa yang dimaksud dengan pengadilan tata usaha negara?',
+            a: 'Pengadilan tata usaha negara adalah pengadilan khusus (di Indonesia, PTUN) yang memeriksa sengketa antara warga atau pelaku usaha dengan lembaga pemerintah terkait keputusan atau ketetapan administratif.'
+          },
+          {
+            q: 'Bisakah saya menentang penolakan izin oleh lembaga pemerintah?',
+            a: 'Ya. Jika sebuah lembaga menolak izin secara sewenang-wenang atau tidak sesuai hukum, Anda dapat mengajukan banding melalui peninjauan administratif internal atau mengajukan gugatan di pengadilan tata usaha.'
+          },
+          {
+            q: 'Apa yang dimaksud dengan “keputusan administratif” (KTUN)?',
+            a: 'Keputusan administratif adalah keputusan tertulis, individual, dan konkret yang diterbitkan oleh pejabat atau lembaga pemerintah dan menimbulkan akibat hukum bagi seseorang atau badan usaha tertentu.'
+          },
+          {
+            q: 'Apa dasar untuk menantang keputusan administratif?',
+            a: 'Dasar yang umum meliputi penyalahgunaan wewenang, pelanggaran prosedur, salah tafsir hukum, atau pelanggaran asas-asas umum pemerintahan yang baik.'
+          }
+        ],
+        relatedArticles: [
+          {
+            title: 'Memahami Hukum Kontrak Bisnis di Indonesia',
+            category: 'Hukum Bisnis',
+            date: '15 Desember 2024',
+            excerpt: 'Tinjauan atas prinsip-prinsip utama yang mengatur kontrak bisnis di Indonesia, termasuk syarat pembentukan, daya laku, dan sengketa yang umum muncul.',
+            gradient: 'linear-gradient(135deg, #132743, #1B3A5C)'
+          }
+        ]
+      }
+    },
+    {
+      params: { slug: 'business-law' },
+      props: {
+        icon: '💼',
+        title: 'Hukum Bisnis',
+        subtitle: 'Mengatur operasi perusahaan, transaksi, dan persaingan pasar yang adil.',
+        overview: [
+          'Hukum bisnis, yang juga dikenal sebagai hukum komersial, mengatur siklus hidup badan usaha dan transaksi yang mereka lakukan. Hukum ini menetapkan aturan untuk pendirian perusahaan, penyusunan perjanjian komersial, perlindungan kekayaan intelektual, dan pengelolaan hubungan kerja.',
+          'Kerangka hukum bisnis yang jelas sangat penting bagi pertumbuhan ekonomi, karena memberi kepastian bagi investor, pengusaha, dan mitra. Hukum ini menentukan bagaimana tanggung jawab dibagi, bagaimana perjanjian ditegakkan, dan bagaimana sengketa korporasi diselesaikan, sehingga meminimalkan risiko dalam operasi komersial.',
+          'Selain mengatur perusahaan, hukum bisnis mendorong praktik yang adil di pasar. Hukum ini mengatur persaingan, mencegah monopoli, melindungi konsumen dari praktik curang, dan memastikan perusahaan beroperasi sesuai standar perpajakan, ketenagakerjaan, dan lingkungan.'
+        ],
+        scope: [
+          'Pendirian dan Tata Kelola Perusahaan (perseroan terbatas, persekutuan, dan joint venture)',
+          'Kontrak Komersial dan Transaksi Penjualan (negosiasi, kepatuhan, dan penyusunan)',
+          'Perlindungan Kekayaan Intelektual (merek dagang, hak cipta, dan paten)',
+          'Merger, Akuisisi, dan Restrukturisasi (langkah kepatuhan dan transaksi korporasi)',
+          'Regulasi Ketenagakerjaan dan Hubungan Kerja (kontrak kerja, hak pekerja, dan sengketa ketenagakerjaan)'
+        ],
+        legalBasis: [
+          'Hukum Dagang Indonesia (Kitab Undang-Undang Hukum Dagang / KUHD)',
+          'Undang-Undang Perusahaan dan Regulasi Tata Kelola Korporasi',
+          'Hukum Kontrak dan Regulasi Perdagangan'
+        ],
+        whyItMatters: 'Hukum bisnis menyediakan seperangkat aturan yang memungkinkan kegiatan perdagangan berjalan lancar. Hukum ini membantu pengusaha mendirikan usaha dengan aman, melindungi investor dari tanggung jawab, menjaga karya kreatif, dan memastikan pasar yang adil serta kompetitif.',
+        examples: [
+          'Sebuah startup teknologi mendaftarkan nama mereknya sebagai merek dagang untuk mencegah pesaing meniru identitasnya.',
+          'Seorang investor menyusun perjanjian pemegang saham untuk menetapkan hak suara dan pembagian keuntungan sebelum memberikan pendanaan pada usaha baru.',
+          'Dua perusahaan ritel menyusun kontrak distribusi yang mengatur jadwal pengiriman, metrik kualitas, dan ketentuan pembayaran.',
+          'Sebuah perusahaan berkonsultasi pada regulasi ketenagakerjaan untuk memastikan kontrak karyawan standar mereka sesuai dengan undang-undang ketenagakerjaan nasional.'
+        ],
+        faqs: [
+          {
+            q: 'Apa yang dimaksud dengan Perseroan Terbatas (PT) di Indonesia?',
+            a: 'PT adalah badan usaha hukum yang modalnya dibagi menjadi saham. Pemegang saham memiliki tanggung jawab terbatas, sehingga aset pribadi mereka umumnya terlindungi dari utang perusahaan.'
+          },
+          {
+            q: 'Mengapa pendaftaran kekayaan intelektual penting bagi perusahaan?',
+            a: 'Mendaftarkan merek dagang, paten, atau hak cipta memberi hak eksklusif untuk memakai karya dan merek Anda. Hal ini mencegah pesaing memanfaatkan hasil kerja Anda dan meningkatkan nilai perusahaan.'
+          },
+          {
+            q: 'Apa yang membuat kontrak bisnis dapat dilaksanakan secara hukum?',
+            a: 'Kontrak dapat dilaksanakan apabila ada kesepakatan timbal balik, pihak yang cakap, pertimbangan yang sah (pertukaran nilai), dan tujuan yang sah, semuanya sesuai dengan persyaratan hukum dagang.'
+          },
+          {
+            q: 'Apa perbedaan antara merger dan akuisisi?',
+            a: 'Merger terjadi ketika dua perusahaan bergabung membentuk satu entitas baru. Akuisisi terjadi ketika satu perusahaan membeli aset atau saham perusahaan lain, sehingga menyerap perusahaan tersebut.'
+          },
+          {
+            q: 'Bagaimana hukum bisnis melindungi konsumen?',
+            a: 'Hukum ini mengatur kebenaran iklan, menegakkan standar keselamatan produk, melarang taktik penjualan yang menyesatkan, dan menjamin hak pengembalian atau garansi untuk produk yang cacat.'
+          }
+        ],
+        relatedArticles: [
+          {
+            title: 'Memahami Hukum Kontrak Bisnis di Indonesia',
+            category: 'Hukum Bisnis',
+            date: '15 Desember 2024',
+            excerpt: 'Tinjauan atas prinsip-prinsip utama yang mengatur kontrak bisnis di Indonesia, termasuk syarat pembentukan, daya laku, dan sengketa yang umum muncul.',
+            gradient: 'linear-gradient(135deg, #132743, #1B3A5C)'
+          }
+        ]
+      }
+    },
+    {
+      params: { slug: 'family-law' },
+      props: {
+        icon: '👨‍👩‍👧‍👦',
+        title: 'Hukum Keluarga',
+        subtitle: 'Memberikan kerangka hukum bagi hubungan domestik, hak asuh, dan transisi harta.',
+        overview: [
+          'Hukum keluarga menangani hubungan domestik dan persoalan keluarga. Hukum ini mengatur hubungan hukum antara suami, istri, orang tua, anak, dan kerabat, serta menyediakan kerangka yang terstruktur untuk peristiwa hidup besar dan perubahan domestik.',
+          'Karena persoalan domestik sangat pribadi, hukum keluarga dirancang untuk menyelesaikan sengketa dengan penuh kehati-hatian dan rasa hormat. Hukum ini mengatur aturan pencatatan perkawinan, perjanjian pranikah, pembagian harta perkawinan, dan hak asuh anak, dengan tujuan melindungi kesejahteraan seluruh anggota keluarga, terutama anak-anak.',
+          'Di luar perkawinan dan perceraian, hukum keluarga juga mengatur perencanaan harta dan warisan. Hukum ini memastikan bahwa ketika seseorang meninggal dunia, harta mereka dibagi secara adil dan sah, baik melalui wasiat tertulis maupun aturan waris yang berlaku.'
+        ],
+        scope: [
+          'Perkawinan dan Perjanjian Pranikah (pencatatan sah dan pemisahan harta)',
+          'Perceraian dan Pembagian Harta (pembubaran perkawinan dan pembagian harta bersama)',
+          'Hak Asuh Anak dan Nafkah (jadwal hak asuh dan kewajiban nafkah anak)',
+          'Adopsi Sah dan Perwalian (proses mengadopsi anak dan menetapkan wali)',
+          'Wasiat, Probate, dan Warisan (perencanaan harta dan aturan pembagian)'
+        ],
+        legalBasis: [
+          'Undang-Undang Perkawinan Indonesia',
+          'Kompilasi Hukum Islam (bagi warga Muslim) dan ketentuan keluarga dalam KUHPer',
+          'Undang-Undang Perlindungan Anak dan Perwalian'
+        ],
+        whyItMatters: 'Hukum keluarga membantu keluarga menjalani perubahan pribadi dengan panduan hukum yang jelas. Hukum ini melindungi hak finansial pasangan, memastikan anak-anak terawat selama perubahan domestik, dan menciptakan ketertiban dalam pewarisan harta keluarga.',
+        examples: [
+          'Pasangan menyusun perjanjian pranikah untuk memperjelas kepemilikan aset yang dimiliki sebelum menikah.',
+          'Orang tua yang bercerai membuat perjanjian pengasuhan yang merinci jadwal hak asuh dan kontribusi dukungan pendidikan untuk anak-anak mereka.',
+          'Sebuah keluarga menyelesaikan proses verifikasi pengadilan untuk mengadopsi anak dan menetapkan status orang tua secara sah.',
+          'Saudara-saudara membagi harta warisan keluarga sesuai ketentuan wasiat yang sah dari orang tua mereka yang meninggal.'
+        ],
+        faqs: [
+          {
+            q: 'Apa tujuan hukum dari perjanjian pranikah?',
+            a: 'Perjanjian pranikah memungkinkan pasangan menentukan bagaimana aset dan utang mereka akan dikelola selama perkawinan dan dibagi jika terjadi perceraian, sehingga menggantikan aturan harta bersama yang standar.'
+          },
+          {
+            q: 'Bagaimana hukum keluarga menentukan hak asuh anak?',
+            a: 'Pertimbangan utama dalam sengketa hak asuh anak adalah kepentingan terbaik anak, termasuk stabilitas, keselamatan, serta kebutuhan emosional dan pendidikan anak.'
+          },
+          {
+            q: 'Apa perbedaan antara harta perkawinan dan harta pribadi?',
+            a: 'Harta perkawinan mencakup aset yang diperoleh salah satu atau kedua pasangan selama perkawinan. Harta pribadi adalah aset yang dimiliki sebelum menikah atau diterima sebagai hadiah atau warisan pribadi.'
+          },
+          {
+            q: 'Bagaimana warisan dibagi jika tidak ada wasiat?',
+            a: 'Jika tidak ada wasiat, harta warisan dibagi di antara ahli waris berdasarkan undang-undang waris yang berlaku, seperti aturan KUHPer atau hukum waris Islam tergantung agama.'
+          },
+          {
+            q: 'Apa yang dimaksud dengan perwalian hukum?',
+            a: 'Perwalian hukum adalah hubungan yang ditetapkan pengadilan, di mana seorang dewasa diberi wewenang untuk mengambil keputusan pribadi, medis, dan keuangan bagi anak di bawah umur atau orang dewasa yang tidak mampu.'
+          }
+        ],
+        relatedArticles: [
+          {
+            title: 'Perubahan Penting dalam Hukum Keluarga: Yang Perlu Anda Ketahui',
+            category: 'Hukum Keluarga',
+            date: '28 November 2024',
+            excerpt: 'Perkembangan terbaru dalam regulasi hukum keluarga dan implikasinya terhadap perkawinan, pengaturan hak asuh, dan hak waris.',
+            gradient: 'linear-gradient(135deg, #1B3A5C, #243B5E)'
+          }
+        ]
+      }
+    },
+    {
+      params: { slug: 'legal-consultation' },
+      props: {
+        icon: '📋',
+        title: 'Konsultasi Hukum',
+        subtitle: 'Analisis preventif, pemeriksaan regulasi, dan pengelolaan risiko hukum.',
+        overview: [
+          'Konsultasi hukum adalah proses mencari analisis ahli mengenai persoalan hukum sebelum mengambil tindakan. Ini merupakan langkah preventif yang membantu individu dan perusahaan memahami hak-hak mereka, menilai risiko, dan mematuhi regulasi sebelum sengketa muncul.',
+          'Dalam konsultasi, praktisi meninjau kontrak, menjelaskan peraturan yang rumit, dan menilai potensi tanggung jawab. Hal ini membantu klien mengambil keputusan yang tepat, baik saat membuka usaha, membeli properti, maupun mempersiapkan negosiasi.',
+          'Dengan mengidentifikasi masalah hukum sejak dini, konsultasi dapat menghemat waktu, mengurangi biaya, dan mencegah litigasi yang menegangkan. Ini merupakan langkah awal yang penting dalam mengelola persoalan hukum dengan penuh kejelasan.'
+        ],
+        scope: [
+          'Tinjauan Dokumen Sebelum Kontrak (menganalisis syarat dan mengidentifikasi risiko tersembunyi)',
+          'Pemeriksaan Kepatuhan Regulasi (memastikan praktik bisnis sesuai hukum yang berlaku)',
+          'Penilaian Opsi Sengketa (mengevaluasi opsi sebelum mengajukan atau menanggapi klaim)',
+          'Nasihat Tata Kelola Perusahaan (panduan mengenai jenis badan usaha dan langkah perizinan)',
+          'Edukasi Hak Hukum Umum (memperjelas kedudukan hukum dan kewajiban regulasi)'
+        ],
+        legalBasis: [
+          'Panduan hukum umum dan praktik konsultasi profesional',
+          'Kerangka bantuan hukum preventif',
+          'Mendorong kesadaran hukum publik dan standar kepatuhan perusahaan'
+        ],
+        whyItMatters: 'Konsultasi hukum meminimalkan ketidakpastian. Hal ini memungkinkan warga dan perusahaan melanjutkan proyek, perjanjian, dan transaksi dengan keyakinan, karena mereka mengetahui bahwa mereka mematuhi hukum dan terlindungi dari risiko tersembunyi.',
+        examples: [
+          'Seorang pengusaha meninjau perjanjian sewa dengan konsultan sebelum menandatangani kontrak sewa kantor komersial.',
+          'Pemilik usaha mencari nasihat mengenai regulasi lingkungan setempat sebelum memperluas operasi manufakturnya.',
+          'Seorang individu meminta penilaian terhadap opsi hukumnya setelah menerima pemberitahuan sengketa kontrak.',
+          'Seorang pemilik rumah meminta pemeriksaan dokumen untuk memastikan keabsahan sertifikat kepemilikan tanah sebelum membeli properti.'
+        ],
+        faqs: [
+          {
+            q: 'Apa yang terjadi selama konsultasi hukum yang khas?',
+            a: 'Anda menyampaikan situasi, dokumen, dan pertanyaan Anda. Praktisi meninjau materi tersebut, menjelaskan hukum yang relevan, mengidentifikasi potensi risiko, dan menguraikan kemungkinan langkah yang dapat diambil.'
+          },
+          {
+            q: 'Mengapa konsultasi dianggap sebagai “bantuan hukum preventif”?',
+            a: 'Konsultasi mengidentifikasi jebakan hukum dan kebutuhan kepatuhan sejak dini, sehingga Anda dapat memperbaiki masalah atau menyusun perjanjian yang lebih baik sebelum berubah menjadi sengketa yang mahal atau pelanggaran regulasi.'
+          },
+          {
+            q: 'Haruskah saya mencari konsultasi sebelum menandatangani kontrak komersial?',
+            a: 'Ya. Meninjau kontrak sebelum menandatangani memastikan Anda memahami kewajiban Anda, memeriksa apakah syaratnya adil, dan membantu menghilangkan klausul yang ambigu yang dapat memicu sengketa.'
+          },
+          {
+            q: 'Dokumen apa yang sebaiknya saya siapkan untuk konsultasi hukum?',
+            a: 'Bawa semua kontrak, korespondensi, kuitansi, akta, atau pemberitahuan resmi yang relevan, serta garis waktu peristiwa dan pertanyaan spesifik Anda.'
+          },
+          {
+            q: 'Apakah konsultasi mengikat saya untuk mempekerjakan praktisi untuk litigasi?',
+            a: 'Tidak. Konsultasi adalah sesi nasihat independen. Anda bebas memutuskan apakah akan melanjutkan layanan hukum lebih lanjut atau menangani masalah tersebut sendiri berdasarkan nasihat yang diberikan.'
+          }
+        ],
+        relatedArticles: [
+          {
+            title: 'Memahami Hukum Kontrak Bisnis di Indonesia',
+            category: 'Hukum Bisnis',
+            date: '15 Desember 2024',
+            excerpt: 'Tinjauan atas prinsip-prinsip utama yang mengatur kontrak bisnis di Indonesia, termasuk syarat pembentukan, daya laku, dan sengketa yang umum muncul.',
+            gradient: 'linear-gradient(135deg, #132743, #1B3A5C)'
+          }
+        ]
+      }
+    }
+  ];
+}
+
+const { slug } = Astro.params;
+const { icon, title, subtitle, overview, scope, legalBasis, whyItMatters, examples, faqs, relatedArticles } = Astro.props;
+---
+
+<Layout
+  title={`${title} | Aletheia.id`}
+  description={`Jelajahi ${title.toLowerCase()} melalui sumber daya pendidikan hukum akademik, panduan belajar, dan wawasan hukum publik dari Aletheia.id.`}
+  keywords={`${title}, ${title.toLowerCase()}, pendidikan hukum akademik, pendidikan hukum tata negara, Aletheia.id`}
+  canonical={`https://aletheia.id/practice-areas/${slug}/`}
+>
+  <main>
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="container animate-on-scroll">
+        <div class="hero-icon-large">{icon}</div>
+        <h1>{title}</h1>
+        <p>{subtitle}</p>
+        <div class="breadcrumb">
+          <a href="/">Beranda</a>
+          <span class="separator">/</span>
+          <a href="/practice-areas">Bidang Kajian</a>
+          <span class="separator">/</span>
+          <span class="current">{title}</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Sections -->
+    <section class="section detail-section">
+      <div class="container detail-container">
+        
+        <!-- Left Area: Main Content -->
+        <div class="detail-main animate-on-scroll">
+          
+          <!-- Overview -->
+          <div class="content-block">
+            <h2>1. Gambaran Umum</h2>
+            <div class="overview-content">
+              {overview.map((paragraph) => (
+                <p>{paragraph}</p>
+              ))}
+            </div>
+          </div>
+
+          <!-- Scope of Law -->
+          <div class="content-block">
+            <h2>2. Ruang Lingkup Hukum</h2>
+            <p class="section-intro-text">Cabang hukum ini secara umum mengatur dan mencakup materi-materi berikut:</p>
+            <ul class="scope-list">
+              {scope.map((item) => (
+                <li>
+                  <span class="bullet-gold">✦</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <!-- Legal Basis in Indonesia -->
+          <div class="content-block">
+            <h2>3. Dasar Hukum di Indonesia</h2>
+            <p class="section-intro-text">Kerangka regulasi dan sumber hukum utama yang mengatur bidang kajian ini meliputi:</p>
+            <ul class="basis-list">
+              {legalBasis.map((item) => (
+                <li>
+                  <span class="bullet-gold">⚖️</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <!-- Why It Matters -->
+          <div class="content-block">
+            <h2>4. Mengapa Hal Ini Penting</h2>
+            <p>{whyItMatters}</p>
+          </div>
+
+          <!-- Educational Examples -->
+          <div class="content-block">
+            <h2>5. Contoh Edukatif</h2>
+            <p class="section-intro-text">Berikut adalah skenario hipotetis yang umum untuk menunjukkan bagaimana bidang hukum ini diterapkan dalam kehidupan sehari-hari maupun konteks komersial:</p>
+            <ol class="examples-list">
+              {examples.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ol>
+          </div>
+
+          <!-- Frequently Asked Questions -->
+          <div class="content-block">
+            <h2>6. Pertanyaan yang Sering Diajukan</h2>
+            <div class="faq-container">
+              {faqs.map((faq, idx) => (
+                <div class="faq-item">
+                  <button class="faq-question" aria-expanded="false" data-idx={idx}>
+                    <span>Q: {faq.q}</span>
+                    <span class="faq-toggle-icon">+</span>
+                  </button>
+                  <div class="faq-answer">
+                    <p>{faq.a}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Area: Sidebar (Contact CTA & Related Articles) -->
+        <aside class="detail-sidebar animate-on-scroll">
+          <!-- Contact Widget -->
+          <div class="widget contact-widget">
+            <h3>Butuh Evaluasi Hukum?</h3>
+            <p>Jika Anda memerlukan panduan yang lebih rinci atau memiliki pertanyaan regulasi tertentu, Anda dapat menjelajahi sumber daya edukatif yang terstruktur bersama tim akademik kami.</p>
+            <a href="/contact" class="btn btn-gold full-width">Hubungi Kami</a>
+          </div>
+
+          <!-- Related Articles Widget -->
+          <div class="widget articles-widget">
+            <h3>Artikel Terkait</h3>
+            <div class="sidebar-articles-list">
+              {relatedArticles.map((article) => (
+                <div class="sidebar-article-card">
+                  <div class="sidebar-article-thumb" style={`background: ${article.gradient};`}>
+                    <span class="sidebar-badge">{article.category}</span>
+                  </div>
+                  <div class="sidebar-article-content">
+                    <span class="sidebar-date">{article.date}</span>
+                    <h4>{article.title}</h4>
+                    <a href="/articles" class="read-more-link">Baca Artikel &rarr;</a>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<script>
+  // Accordion client-side interaction for FAQs
+  document.addEventListener('DOMContentLoaded', () => {
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    
+    faqQuestions.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        
+        // Close other open answers
+        faqQuestions.forEach(otherBtn => {
+          if (otherBtn !== btn) {
+            otherBtn.setAttribute('aria-expanded', 'false');
+            const otherAnswer = otherBtn.nextElementSibling as HTMLElement;
+            if (otherAnswer) {
+              otherAnswer.style.maxHeight = '';
+              otherAnswer.style.paddingTop = '';
+              otherAnswer.style.paddingBottom = '';
+            }
+            const otherIcon = otherBtn.querySelector('.faq-toggle-icon');
+            if (otherIcon) otherIcon.textContent = '+';
+          }
+        });
+
+        // Toggle current
+        btn.setAttribute('aria-expanded', (!expanded).toString());
+        const answer = btn.nextElementSibling as HTMLElement;
+        const icon = btn.querySelector('.faq-toggle-icon');
+        
+        if (answer) {
+          if (!expanded) {
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+            answer.style.paddingTop = '1rem';
+            answer.style.paddingBottom = '1rem';
+            if (icon) icon.textContent = '−';
+          } else {
+            answer.style.maxHeight = '';
+            answer.style.paddingTop = '';
+            answer.style.paddingBottom = '';
+            if (icon) icon.textContent = '+';
+          }
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+  /* Page Hero adjustment */
+  .hero-icon-large {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Detail Layout */
+  .detail-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+  }
+
+  .detail-main {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+  }
+
+  .content-block h2 {
+    font-size: 1.8rem;
+    color: var(--navy);
+    margin-bottom: 1.25rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--gray-200);
+  }
+
+  .overview-content p {
+    margin-bottom: 1.25rem;
+  }
+
+  .content-block p {
+    color: var(--gray-700);
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  .section-intro-text {
+    margin-bottom: 1.25rem;
+  }
+
+  /* Scope & Basis List */
+  .scope-list, .basis-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
+  .scope-list li, .basis-list li {
+    display: flex;
+    gap: 0.85rem;
+    align-items: flex-start;
+    color: var(--gray-700);
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  .bullet-gold {
+    color: var(--gold-dark);
+    font-weight: bold;
+    user-select: none;
+  }
+
+  /* Examples List */
+  .examples-list {
+    padding-left: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .examples-list li {
+    color: var(--gray-700);
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
+  /* FAQ Accordion Styling */
+  .faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .faq-item {
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background-color: var(--white);
+  }
+
+  .faq-question {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--navy);
+    cursor: pointer;
+    transition: var(--transition-base);
+  }
+
+  .faq-question:hover {
+    background-color: var(--gray-50);
+    color: var(--gold-dark);
+  }
+
+  .faq-toggle-icon {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1;
+    color: var(--gold);
+    transition: var(--transition-base);
+  }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 1.5rem;
+    background-color: var(--gray-50);
+    border-top: 0 solid var(--gray-200);
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+  }
+
+  .faq-answer p {
+    color: var(--gray-700);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  /* Sidebar Widget */
+  .detail-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    position: sticky;
+    top: 100px;
+  }
+
+  .widget {
+    background-color: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    padding: 2rem;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .widget h3 {
+    font-size: 1.25rem;
+    color: var(--navy);
+    margin-bottom: 1.25rem;
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+  }
+
+  /* Contact Widget */
+  .contact-widget p {
+    color: var(--gray-700);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .full-width {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Related Articles Widget */
+  .sidebar-articles-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .sidebar-article-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--gray-100);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+  }
+
+  .sidebar-article-thumb {
+    height: 100px;
+    position: relative;
+  }
+
+  .sidebar-badge {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    background-color: var(--gold);
+    color: var(--navy-darkest);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.25rem 0.5rem;
+    border-radius: 2px;
+  }
+
+  .sidebar-article-content {
+    padding: 1rem;
+  }
+
+  .sidebar-date {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--gray-500);
+    margin-bottom: 0.4rem;
+  }
+
+  .sidebar-article-content h4 {
+    font-size: 0.95rem;
+    color: var(--navy);
+    line-height: 1.4;
+    margin-bottom: 0.75rem;
+  }
+
+  .read-more-link {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--gold-dark);
+    transition: var(--transition-base);
+  }
+
+  .sidebar-article-card:hover .read-more-link {
+    color: var(--gold-light);
+  }
+
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .detail-container {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .detail-sidebar {
+      position: static;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .content-block h2 {
+      font-size: 1.5rem;
+    }
+    .content-block p, 
+    .scope-list li, 
+    .basis-list li,
+    .examples-list li {
+      font-size: 0.95rem;
+    }
+  }
+</style>
