@@ -18,6 +18,7 @@ const {
 } = Astro.props;
 
 const canonicalUrl = canonical ?? new URL(Astro.url.pathname, 'https://aletheia.id').toString();
+const siteName = 'Aletheia.id';
 ---
 
 <!doctype html>
@@ -30,21 +31,19 @@ const canonicalUrl = canonical ?? new URL(Astro.url.pathname, 'https://aletheia.
     <meta name="keywords" content={keywords} />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href={canonicalUrl} />
+    <link rel="icon" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/images/logo.png" />
 
-    <!-- Future favicon: place favicon.ico in /public later; this link will work without further code changes. -->
-    <link rel="icon" href="/favicon.ico" />
-
-    <!-- Open Graph -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalUrl} />
-    <meta property="og:site_name" content="Aletheia.id" />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:image" content="https://aletheia.id/images/logo.png" />
+    <meta name="twitter:card" content="summary" />
 
-    <!-- Theme Color -->
     <meta name="theme-color" content="#132743" />
 
-    <!-- Google Fonts Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link

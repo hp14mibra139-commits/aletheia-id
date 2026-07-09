@@ -9,7 +9,8 @@ const attorneys = [
     specialization: 'Civil Law & Business Law',
     bio: 'Student of Constitutional Law (Siyasah), Faculty of Sharia and Law, UIN Sunan Gunung Djati Bandung.',
     color: '#1B3A5C',
-    instagram: 'https://www.instagram.com/1brraa?igsh=dnNpbHN0NXR6YnVz'
+    instagram: 'https://www.instagram.com/1brraa?igsh=dnNpbHN0NXR6YnVz',
+    photo: '/images/contributors/contributor-1.jpg'
   },
   {
     name: 'Alfin Muhammad Zain',
@@ -18,7 +19,8 @@ const attorneys = [
     specialization: 'Constitutional Law',
     bio: 'Student of Constitutional Law (Siyasah), Faculty of Sharia and Law, UIN Sunan Gunung Djati Bandung.',
     color: '#243B5E',
-    instagram: 'https://www.instagram.com/alfinnzenn_?igsh=MTRxMDU5ZXA2ZHVwaw=='
+    instagram: 'https://www.instagram.com/alfinnzenn_?igsh=MTRxMDU5ZXA2ZHVwaw==',
+    photo: '/images/contributors/contributor-2.jpg'
   },
   {
     name: 'Alisa Zahra Salsabila',
@@ -27,7 +29,8 @@ const attorneys = [
     specialization: 'Family Law',
     bio: 'Student of Constitutional Law (Siyasah), Faculty of Sharia and Law, UIN Sunan Gunung Djati Bandung.',
     color: '#132743',
-    instagram: 'https://instagram.com/attorney3_username'
+    instagram: 'https://www.instagram.com/alisazsa?igsh=MWpydnh4Y3Jsa2xwMg==',
+    photo: '/images/contributors/contributor-3.jpg'
   },
   {
     name: 'Muhamad Reyhan',
@@ -36,7 +39,8 @@ const attorneys = [
     specialization: 'Administrative Law',
     bio: 'Student of Constitutional Law (Siyasah), Faculty of Sharia and Law, UIN Sunan Gunung Djati Bandung.',
     color: '#1B3A5C',
-    instagram: 'https://instagram.com/attorney4_username'
+    instagram: 'https://www.instagram.com/ryyhhnnn?igsh=MXdkZ2tubzA5cGN2bg==',
+    photo: '/images/contributors/contributor-4.jpg'
   },
   {
     name: 'Muhammad Asyam Kamal',
@@ -45,7 +49,8 @@ const attorneys = [
     specialization: 'Civil Law & Business Law',
     bio: 'Student of Constitutional Law (Siyasah), Faculty of Sharia and Law, UIN Sunan Gunung Djati Bandung.',
     color: '#1B3A5C',
-    instagram: 'https://instagram.com/attorney5_username'
+    instagram: 'https://www.instagram.com/_asyamkamal?igsh=bnQwYXBoMmw1d2l4',
+    photo: '/images/contributors/contributor-5.jpg'
   },
   {
     name: 'Hasya Clerinafisa',
@@ -54,7 +59,8 @@ const attorneys = [
     specialization: 'Civil Law & Business Law',
     bio: 'Student of Constitutional Law (Siyasah), Faculty of Sharia and Law, UIN Sunan Gunung Djati Bandung.',
     color: '#1B3A5C',
-    instagram: 'https://instagram.com/attorney6_username'
+    instagram: 'https://www.instagram.com/hasyaclerin?igsh=enc2Z3Vyb291OXhn',
+    photo: '/images/contributors/contributor-6.jpg'
   },
   {
     name: 'Noval Apriyansa',
@@ -63,7 +69,8 @@ const attorneys = [
     specialization: 'Civil Law & Business Law',
     bio: 'Student of Constitutional Law (Siyasah), Faculty of Sharia and Law, UIN Sunan Gunung Djati Bandung.',
     color: '#1B3A5C',
-    instagram: 'https://instagram.com/attorney7_username'
+    instagram: 'https://instagram.com/attorney7_username',
+    photo: '/images/contributors/contributor-7.jpg'
   },
 ];
 ---
@@ -74,7 +81,6 @@ const attorneys = [
   keywords="kontributor, peneliti hukum, pendidikan hukum akademik, penelitian hukum mahasiswa"
 >
   <main>
-    <!-- Page Hero -->
     <section class="page-hero">
       <div class="container animate-on-scroll">
         <h1>Kontributor Kami</h1>
@@ -90,16 +96,20 @@ const attorneys = [
     <section class="section attorneys-section">
       <div class="container">
         <p class="section-subtitle animate-on-scroll" style="margin-bottom: 4rem;">
-          Profil kontributor di bawah ini menampilkan karya akademik dan editorial yang mendukung Aletheia.id sebagai platform pendidikan hukum bagi mahasiswa, pembaca, dan pencari ilmu.
+          Profil kontributor di bawah ini menampilkan karya akademik and editorial yang mendukung Aletheia.id sebagai platform pendidikan hukum bagi mahasiswa, pembaca, and pencari ilmu.
         </p>
 
         <div class="attorneys-grid">
           {attorneys.map((lawyer) => (
             <div class="card attorney-card animate-on-scroll">
               <div class="attorney-avatar-wrapper">
-                <div class="attorney-avatar" style={`background-color: ${lawyer.color};`}>
-                  {lawyer.initials}
-                </div>
+                {lawyer.photo ? (
+                  <img src={lawyer.photo} alt={lawyer.name} class="attorney-photo" />
+                ) : (
+                  <div class="attorney-avatar" style={`background-color: ${lawyer.color};`}>
+                    {lawyer.initials}
+                  </div>
+                )}
               </div>
               
               <div class="attorney-details">
@@ -110,10 +120,9 @@ const attorneys = [
               </div>
               
               <div class="attorney-socials">
-                <!-- Social link provided for each contributor profile -->
                 <a
                   href={lawyer.instagram}
-                  aria-label="Profil Instagram"
+                  aria-label={`Profil Instagram ${lawyer.name}`}
                   class="social-icon-link"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -135,7 +144,7 @@ const attorneys = [
         <div class="cta-box">
           <h2>Tertarik untuk Berkontribusi pada Platform Ini?</h2>
           <p>
-            Kami menyambut kerja sama yang baik, masukan akademik, dan kontribusi yang mendukung pendidikan hukum serta pemahaman publik.
+            Kami menyambut kerja sama yang baik, masukan akademik, and kontribusi yang mendukung pendidikan hukum serta pemahaman publik.
           </p>
           <a href="/contact" class="btn btn-outline">Hubungi Kami</a>
         </div>
@@ -182,7 +191,18 @@ const attorneys = [
     transition: var(--transition-base);
   }
 
-  .attorney-card:hover .attorney-avatar {
+  .attorney-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--gold);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-base);
+  }
+
+  .attorney-card:hover .attorney-avatar,
+  .attorney-card:hover .attorney-photo {
     transform: scale(1.05);
     box-shadow: var(--shadow-gold), var(--shadow-lg);
   }
@@ -287,3 +307,4 @@ const attorneys = [
     }
   }
 </style>
+

@@ -8,7 +8,6 @@ import Layout from '../layouts/Layout.astro';
   keywords="tentang Aletheia.id, platform pendidikan hukum akademik, literasi hukum, pendidikan hukum tata negara"
 >
   <main>
-    <!-- Page Hero -->
     <section class="page-hero">
       <div class="container animate-on-scroll">
         <h1>Tentang Platform Kami</h1>
@@ -40,8 +39,10 @@ import Layout from '../layouts/Layout.astro';
           <div class="profile-image-container animate-on-scroll">
             <div style="background: #1a2a4a; color: white; height: 100%; min-height: 300px; display: flex; align-items: center; justify-content: center; border-radius: 12px; font-size: 24px; padding: 20px; overflow: hidden;">
               <img
-                src="/images/logo.png"
+                src="/images/logo/logo.png"
                 alt="Logo Aletheia.id"
+                loading="lazy"
+                decoding="async"
                 style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; display: block;"
                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
               />
@@ -132,7 +133,6 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <style>
-  /* Company Profile */
   .profile-grid {
     display: grid;
     grid-template-columns: 1.2fr 1fr;
@@ -162,39 +162,6 @@ import Layout from '../layouts/Layout.astro';
     margin-bottom: 1.25rem;
     font-size: 1.05rem;
     line-height: 1.8;
-  }
-
-  .image-placeholder {
-    height: 350px;
-    background: linear-gradient(135deg, var(--navy-light) 0%, var(--navy-darkest) 100%);
-    border-radius: var(--radius-md);
-    border: 2px dashed var(--gold);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: var(--white);
-    padding: 2rem;
-    text-align: center;
-    box-shadow: var(--shadow-md);
-  }
-
-  .placeholder-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
-
-  .placeholder-text {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--gold);
-    margin-bottom: 0.5rem;
-  }
-
-  .placeholder-subtext {
-    font-size: 0.85rem;
-    color: var(--gray-300);
   }
 
   /* Vision & Mission */

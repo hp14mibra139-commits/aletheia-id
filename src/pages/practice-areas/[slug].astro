@@ -534,20 +534,18 @@ const { icon, title, subtitle, overview, scope, legalBasis, whyItMatters, exampl
 </Layout>
 
 <script>
-  // Accordion client-side interaction for FAQs
   document.addEventListener('DOMContentLoaded', () => {
     const faqQuestions = document.querySelectorAll('.faq-question');
-    
-    faqQuestions.forEach(btn => {
+
+    faqQuestions.forEach((btn) => {
       btn.addEventListener('click', () => {
         const expanded = btn.getAttribute('aria-expanded') === 'true';
-        
-        // Close other open answers
-        faqQuestions.forEach(otherBtn => {
+
+        faqQuestions.forEach((otherBtn) => {
           if (otherBtn !== btn) {
             otherBtn.setAttribute('aria-expanded', 'false');
-            const otherAnswer = otherBtn.nextElementSibling as HTMLElement;
-            if (otherAnswer) {
+            const otherAnswer = otherBtn.nextElementSibling;
+            if (otherAnswer instanceof HTMLElement) {
               otherAnswer.style.maxHeight = '';
               otherAnswer.style.paddingTop = '';
               otherAnswer.style.paddingBottom = '';
@@ -557,14 +555,13 @@ const { icon, title, subtitle, overview, scope, legalBasis, whyItMatters, exampl
           }
         });
 
-        // Toggle current
         btn.setAttribute('aria-expanded', (!expanded).toString());
-        const answer = btn.nextElementSibling as HTMLElement;
+        const answer = btn.nextElementSibling;
         const icon = btn.querySelector('.faq-toggle-icon');
-        
-        if (answer) {
+
+        if (answer instanceof HTMLElement) {
           if (!expanded) {
-            answer.style.maxHeight = answer.scrollHeight + 'px';
+            answer.style.maxHeight = `${answer.scrollHeight}px`;
             answer.style.paddingTop = '1rem';
             answer.style.paddingBottom = '1rem';
             if (icon) icon.textContent = '−';

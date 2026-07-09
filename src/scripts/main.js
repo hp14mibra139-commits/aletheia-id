@@ -1,8 +1,3 @@
-// ============================================
-// LEX NUSANTARA — Client-Side Scripts
-// ============================================
-
-// --- Intersection Observer for Scroll Animations ---
 document.addEventListener('DOMContentLoaded', () => {
   const animatedElements = document.querySelectorAll('.animate-on-scroll');
 
@@ -11,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
       (entries) => {
         entries.forEach((entry, index) => {
           if (entry.isIntersecting) {
-            // Stagger animations slightly for elements appearing together
             setTimeout(() => {
               entry.target.classList.add('visible');
             }, index * 100);
@@ -28,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
     animatedElements.forEach((el) => observer.observe(el));
   }
 
-  // --- Smooth Scroll for Anchor Links ---
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener('click', (e) => {
       const href = anchor.getAttribute('href');
